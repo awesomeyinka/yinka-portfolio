@@ -18,6 +18,33 @@
   </head>
 
   <body>
+    <script>
+      (function () {
+        const setTheme = (theme) => {
+          document.documentElement.setAttribute('data-theme', theme);
+          localStorage.setItem('theme', theme);
+        };
+
+        const systemPreferDarkTheme = window.matchMedia(
+          '(prefers-color-scheme: dark).matches'
+        );
+
+        let localStorageTheme = null;
+
+        try {
+          localStorageTheme = localStorage.getItem('theme');
+        } catch (err) {
+          window.console.warn(err);
+        }
+        const localStorageThemeExists = !!localStorageTheme;
+
+        if (localStorageThemeExists) {
+          setTheme(localStorageTheme);
+        } else if (systemPreferDarkTheme) {
+          setTheme('dark');
+        }
+      })();
+    </script>
     <header>
       <div class="logo"><a href="./index.html">Yinka</a></div>
 

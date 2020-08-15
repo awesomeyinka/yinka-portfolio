@@ -162,6 +162,9 @@ svg {
   --code-background: #f4fffb;
   --pre-background: #f4fffb;
   --pre-border-color: #cfd9d5;
+
+  --theme-switch-background: #fff5f8;
+  --theme-switch-transform: translateX(0%);
 }
 
 [data-theme='dark'] {
@@ -186,6 +189,9 @@ svg {
   --code-background: #3b3942;
   --pre-background: #3b3942;
   --pre-border-color: #323038;
+
+  --theme-switch-background: #34323d;
+  --theme-switch-transform: translateX(100%);
 }
 
 html {
@@ -337,7 +343,9 @@ nav {
   height: 100%;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
   border-radius: var(--border--rounded-full);
-  background-color: #fff5f8;
+
+  background-color: var(--theme-switch-background);
+  transform: var(--theme-switch-transform);
 }
 
 .theme-switch__label {
@@ -348,6 +356,9 @@ nav {
   margin-left: 1rem;
   margin-right: 1rem;
   z-index: 2;
+
+  /* opacity: var(--theme-switch-opacity); */
+  /* font-weight: var(--theme-switch-font-weight); */
 }
 
 .theme-switch__label--dark {
@@ -356,11 +367,6 @@ nav {
 
 .theme-switch__label--light {
   font-weight: 500;
-}
-
-.theme-switch--dark::before {
-  transform: translateX(100%);
-  background-color: #34323d;
 }
 
 .theme-switch--dark .theme-switch__label--dark {

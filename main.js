@@ -1,14 +1,14 @@
 (function () {
-  const $toggleButton = document.querySelector('.js-toggle-button');
-  const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
-  const localStorageTheme = () => localStorage.getItem('theme') || 'light';
-
   const setTheme = (theme) => {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
   };
 
-  systemTheme.addListener(($event) => {
+  const systemPreferDarkTheme = window.matchMedia(
+    '(prefers-color-scheme: dark)'
+  );
+
+  systemPreferDarkTheme.addListener(($event) => {
     if ($event.matches) {
       setTheme('dark');
     } else {
@@ -22,24 +22,11 @@
   const toggleTheme = () => {
     if (isDarkTheme()) {
       setTheme('light');
-      $toggleButton.classList.remove('theme-switch--dark');
     } else {
       setTheme('dark');
-      $toggleButton.classList.add('theme-switch--dark');
     }
   };
 
+  const $toggleButton = document.querySelector('.js-toggle-button');
   $toggleButton.addEventListener('click', toggleTheme);
-
-  if (localStorageTheme() === 'dark') {
-    $toggleButton.classList.add('theme-switch--dark');
-    setTheme(localStorageTheme());
-  } else if (localStorageTheme() === 'light') {
-    setTheme(localStorageTheme());
-  } else if (systemTheme.matches) {
-    setTheme('dark');
-    $toggleButton.classList.add('theme-switch--dark');
-  } else {
-    setTheme('light');
-  }
 })();

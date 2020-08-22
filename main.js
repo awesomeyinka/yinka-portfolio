@@ -4,11 +4,11 @@
     localStorage.setItem('theme', theme);
   };
 
-  const systemPreferDarkTheme = window.matchMedia(
+  const systemPrefferedThemeQuery = window.matchMedia(
     '(prefers-color-scheme: dark)'
   );
 
-  systemPreferDarkTheme.addListener(($event) => {
+  systemPrefferedThemeQuery.addListener(($event) => {
     if ($event.matches) {
       setTheme('dark');
     } else {

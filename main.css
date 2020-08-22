@@ -278,7 +278,7 @@ nav {
 
 .nav__item {
   font-weight: 500;
-  border-radius: var(--border--rounded-full);
+  border-radius: var(--border-rounded-full);
   transition-property: background-color, opacity;
   transition-timing-function: ease-out;
   transition-duration: 300ms;
@@ -296,7 +296,7 @@ nav {
   position: relative;
   display: flex;
   background-color: var(--navlink-background-color);
-  border-radius: var(--border--rounded-full);
+  border-radius: var(--border-rounded-full);
   display: flex;
   justify-content: space-between;
   cursor: pointer;
@@ -313,7 +313,7 @@ nav {
   transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   height: 100%;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
-  border-radius: var(--border--rounded-full);
+  border-radius: var(--border-rounded-full);
   background-color: var(--theme-switch-background);
   transform: var(--theme-switch-transform);
 }
@@ -321,7 +321,7 @@ nav {
 .theme-switch__label {
   color: inherit;
   margin: 0;
-  border-radius: var(--border--rounded-full);
+  border-radius: var(--border-rounded-full);
   margin: 0.6rem;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -442,7 +442,7 @@ section {
 
 .browser-mockup__controls {
   background-color: rgb(254, 192, 49);
-  border-radius: var(--border--rounded-full);
+  border-radius: var(--border-rounded-full);
   width: 10px;
   height: 10px;
   position: absolute;
@@ -454,7 +454,7 @@ section {
 .browser-mockup__controls::before {
   content: '';
   background-color: rgb(255, 96, 84);
-  border-radius: var(--border--rounded-full);
+  border-radius: var(--border-rounded-full);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -464,7 +464,7 @@ section {
 .browser-mockup__controls::after {
   content: '';
   background-color: rgb(0, 206, 74);
-  border-radius: var(--border--rounded-full);
+  border-radius: var(--border-rounded-full);
   position: absolute;
   height: 100%;
   width: 100%;

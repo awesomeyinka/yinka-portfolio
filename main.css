@@ -14,7 +14,7 @@
   --border-rounded-sm: 0.125rem;
   --border-rounded: 0.25rem;
   --border-rounded-lg: 0.5rem;
-  --border--rounded-full: 9999px;
+  --border-rounded-full: 9999px;
 
   --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
@@ -42,8 +42,6 @@ html {
 }
 
 body {
-  background-color: var(--bg-color-light);
-  color: var(--color-dark);
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
 }
@@ -143,26 +141,12 @@ svg {
   --background-color: #fff4f8;
   --header-background-color: #fff4f8;
   --footer-background-color: #fff4f8;
-  --footer-background-color: #fff4f8;
   --text-color: #565556;
   --scrollbar-color: #26242e3f;
   --button-background-color: #f4fffb;
-  --form-background-color: #28463b;
-  --form-border-color: #98989891;
-  --form-box-shadow: inset 3px 3px 1px #cfd9d5, inset -3px -3px 1px #ffffff;
   --border-color: #98989891;
-  --box-background-color: #bebbbc;
   --image-border-color: #e8e8e8;
-  --image-box-shadow: 6px 6px 0px #cfd9d5, -5px -5px 0px #fff4f8;
   --navlink-background-color: rgba(0, 0, 0, 0.06);
-  --button-box-shadow--hover: 0px 0px 0px #2d2c33, 5px 5px 0px #494651;
-  --button-box-shadow: 5px 5px 0px #cfd9d5, 0px 0px 0px #ffffff;
-  --blockquote-background: #f4fffb;
-  --blockquote-border: 0.3rem solid #cfd9d5;
-  --code-background: #f4fffb;
-  --pre-background: #f4fffb;
-  --pre-border-color: #cfd9d5;
-
   --theme-switch-background: #fff5f8;
   --theme-switch-transform: translateX(0%);
 }
@@ -174,22 +158,9 @@ svg {
   --text-color: #ffffff;
   --scrollbar-color: #ffffff67;
   --button-background-color: #3b3942;
-  --form-background-color: #3b3942;
-  --form-border-color: #67656c;
-  --form-box-shadow: inset 5px 5px 0px #2d2c33, inset -5px -5px 0px #494651;
   --border-color: #67656c;
-  --box-background-color: rgba(0, 0, 0, 0.2);
   --image-border-color: #3b3942;
-  --image-box-shadow: 6px 6px 0px #323038, 0px 0px 0px #44424c;
   --navlink-background-color: rgba(0, 0, 0, 0.4);
-  --button-box-shadow--hover: 0px 0px 0px #2d2c33, 5px 5px 0px #494651;
-  --button-box-shadow: 6px 6px 0px #323038, 0px 0px 0px #44424c;
-  --blockquote-background: #3b3942;
-  --blockquote-border: 0.3rem solid #323038;
-  --code-background: #3b3942;
-  --pre-background: #3b3942;
-  --pre-border-color: #323038;
-
   --theme-switch-background: #34323d;
   --theme-switch-transform: translateX(100%);
 }
@@ -355,9 +326,6 @@ nav {
   margin-left: 1rem;
   margin-right: 1rem;
   z-index: 2;
-
-  /* opacity: var(--theme-switch-opacity); */
-  /* font-weight: var(--theme-switch-font-weight); */
 }
 
 .theme-switch__label--dark {

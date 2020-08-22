@@ -25,9 +25,9 @@
           localStorage.setItem('theme', theme);
         };
 
-        const systemPreferDarkTheme = window.matchMedia(
-          '(prefers-color-scheme: dark).matches'
-        );
+        const systemPrefersDarkTheme = window.matchMedia(
+          '(prefers-color-scheme: dark)'
+        ).matches;
 
         let localStorageTheme = null;
 
@@ -36,11 +36,12 @@
         } catch (err) {
           window.console.warn(err);
         }
+
         const localStorageThemeExists = !!localStorageTheme;
 
         if (localStorageThemeExists) {
           setTheme(localStorageTheme);
-        } else if (systemPreferDarkTheme) {
+        } else if (systemPrefersDarkTheme) {
           setTheme('dark');
         }
       })();
@@ -247,8 +248,8 @@
           </p>
 
           <p>
-            Apart from web development, my interest includes novels, non
-            fictions and movies.
+            Apart from web development, my interest includes poetry, novels, and
+            anime.
           </p>
         </div>
       </section>
